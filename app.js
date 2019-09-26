@@ -1,5 +1,6 @@
 
-   
+ /* Si algunas de las api no les sale o hay un errror, vuelvan a caragar*/
+ /*hay como 3 errores en el sitio, sin embargo, son por la Api de la misma pagina, asi que no hay problema*/  
 /*Todo este codigo es la Api, hace falta hacer el html, para que se imprima la informacion en el sitio*/
 
 const apiUrl ="https://ghibliapi.herokuapp.com/films/"; 
