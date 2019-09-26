@@ -1,14 +1,20 @@
-const ghibil ={
-    name : document.getElementById(`ghibil-name`),
-    sprite : document.getElementById(`ghibil-sprite`),
-    descripcion: document.getElementById(`ghibil-descripcion`)
-   
-};
+
+    const ghibilTitle = document.getElementById("ghibil-title");
+    const ghibilfronttitle = document.getElementById("ghibil-fronttitle");
+    const ghibilSprite = document.getElementById(`ghibil-sprite`);
+    const ghibilDirector = document.getElementById(`ghibil-director`);
+    const ghibilDescripcion = document.getElementById(`ghibil-descripcion`);
+    const ghibilPeople = document.getElementById(`ghibil-people`);
+    const ghibilProducer = document.getElementById(`ghibil-producer`);
+    const ghibilLocations = document.getElementById(`ghibil-locations`);
+    const ghibilRelease_Date= document.getElementById(`ghibil-releasedate`);
+    const ghibilDirectorVehicles = document.getElementById(`ghibil-vehicles`);
+
 
 const apiUrl ="https://ghibliapi.herokuapp.com/films/"; 
 
 const getVehicles = async url =>{
-    const response = await fetch(url);
+    const response = await fetch(url); //${apiUrl}
     const dataVehicles = await response.json();
     //console.log(dataVehicles);
     return dataVehicles;
@@ -31,7 +37,7 @@ const getPeople = async url =>{
 const getGhibilDescripcionData = async url =>{
     const response = await fetch(url);
     const ghibilData = await response.json();
-   console.log(ghibilData);
+  // console.log(ghibilData);
     ghibilData.forEach(async element => {
         const {title, director, description, people, producer, locations, release_date, vehicles} = element;
 
@@ -50,6 +56,7 @@ const getGhibilDescripcionData = async url =>{
             }
         );
         console.log(description);
+
         getPeople(people).then(
             dataPeople =>{
                 dataPeople.forEach(element => {
@@ -79,9 +86,28 @@ const getGhibilDescripcionData = async url =>{
                 });
             }
         );
+        ghibilfronttitle.innerText = `Conoce sobre las peliculas de Estudio Ghibil`;
+        ghibilData.forEach(element => {
+            ghibilTitle.innerText = `<li>Pelicula: ${title}</li>`;
+        });
+        
+        ghibilSprite.innerText = `Conoce sobre `;
+        ghibilDirector .innerText = `Conoce sobre las peliculas de Estudio Ghibil`;
+        ghibilDescripcion.innerText = `Conoce sobre las peliculas de Estudio Ghibil`;
+        ghibilPeople.innerText = `Conoce sobre las peliculas de Estudio Ghibil`;
+        ghibilProducer.innerText = `Conoce sobre las peliculas de Estudio Ghibil`;
+        ghibilLocations.innerText = `Conoce sobre las peliculas de Estudio Ghibil`;
+        ghibilRelease_Date.innerText = `Conoce sobre las peliculas de Estudio Ghibil`;
+        ghibilDirectorVehicles.innerText = `Conoce sobre las peliculas de Estudio Ghibil`;
+
         });
     return ghibilData;
-}
+
+    
+    //pokemonNumber.innerText= `Numero de Pokedexs: ${pokemon.id}`;
+    //pokemonWeight.innerText=`El peso es de: ${pokemon.weight}`
+    //pokemonFrontImg.src = frontImg;
+};
 
 /*let getGhibilData = async () =>{
     const response = await fetch (`${apiUrl}`)
