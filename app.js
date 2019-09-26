@@ -44,6 +44,11 @@ const getGhibilDescripcionData = async url =>{
         console.log(title);
         console.log(director);
         console.log(producer);
+        console.log(description);
+        console.log(release_date)
+        //console.log(people);
+        //console.log(locations);
+        //console.log(vehicles);
         getLocations(locations).then(
             dataLocations =>{
                 dataLocations.forEach(element => {
@@ -55,7 +60,7 @@ const getGhibilDescripcionData = async url =>{
                 });
             }
         );
-        console.log(description);
+        
 
         getPeople(people).then(
             dataPeople =>{
@@ -68,13 +73,6 @@ const getGhibilDescripcionData = async url =>{
                 });
             }
         );
-        console.log(release_date)
-        //console.log(people);
-        //console.log(locations);
-        //console.log(vehicles);
-
-       
-     
         getVehicles(vehicles).then(
             dataVehicles =>{
                 dataVehicles.forEach(element => {
@@ -86,12 +84,10 @@ const getGhibilDescripcionData = async url =>{
                 });
             }
         );
+       
         ghibilfronttitle.innerText = `Conoce sobre las peliculas de Estudio Ghibil`;
-        ghibilData.forEach(element => {
-            ghibilTitle.innerText = `<li>Pelicula: ${title}</li>`;
-        });
-        
-        ghibilSprite.innerText = `Conoce sobre `;
+       
+       /* ghibilSprite.innerText = `Conoce sobre `;
         ghibilDirector .innerText = `Conoce sobre las peliculas de Estudio Ghibil`;
         ghibilDescripcion.innerText = `Conoce sobre las peliculas de Estudio Ghibil`;
         ghibilPeople.innerText = `Conoce sobre las peliculas de Estudio Ghibil`;
@@ -99,7 +95,13 @@ const getGhibilDescripcionData = async url =>{
         ghibilLocations.innerText = `Conoce sobre las peliculas de Estudio Ghibil`;
         ghibilRelease_Date.innerText = `Conoce sobre las peliculas de Estudio Ghibil`;
         ghibilDirectorVehicles.innerText = `Conoce sobre las peliculas de Estudio Ghibil`;
-
+*/
+        title.forEach(element => {
+            ghibilTitle.innerHTML = `<li>${element.title.title}</li>`;
+            
+        });
+        
+       
         });
     return ghibilData;
 
