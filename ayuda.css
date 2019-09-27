@@ -1,4 +1,14 @@
+
+
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(Marie.jpg)
+    color: orange;
 }
+
+html { 
+    background: url(Marie.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }

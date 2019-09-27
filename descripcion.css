@@ -1,4 +1,13 @@
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(Luciernagos.ai)
+    
 }
+
+
+html { 
+    background: url(Luciernagos.ai) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
