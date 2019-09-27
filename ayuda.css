@@ -4,6 +4,16 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: orange;
 }
+.nav-menu-bar
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color: aquamarine;
+    width: 100%;
+    text-align: center;
+    font-size:20px;
+
+}
 
 html { 
     background: url(Marie.jpg) no-repeat center center fixed; 
