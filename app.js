@@ -9,6 +9,7 @@ const release_date = document.getElementById('release_date');
 const director = document.getElementById('director');
 const producer = document.getElementById('producer');
 const description = document.getElementById('description');
+const ghibliData = document.getElementById('ghibliData');
 
 const url ="https://ghibliapi.herokuapp.com/films/"; 
  /* Parte de la Api que dice las localizaciones*/
